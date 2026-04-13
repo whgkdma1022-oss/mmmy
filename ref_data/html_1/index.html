@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조하음 | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #1d1d1f;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .hero {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(60px, 12vw, 110px);
+            font-weight: 700;
+            letter-spacing: -0.05em;
+            color: #1d1d1f;
+            margin-bottom: 10px;
+            opacity: 0;
+            transform: translateY(40px);
+            animation: appleFadeUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+        }
+
+        .sub {
+            font-size: 26px;
+            font-weight: 400;
+            color: #86868b;
+            margin-bottom: 50px;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: appleFadeUp 1.2s cubic-bezier(0.4, 0, 0.2, 1) 0.3s forwards;
+        }
+
+        .links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            opacity: 0;
+            animation: appleFadeUp 1s ease 0.8s forwards;
+        }
+
+        .btn-apple {
+            padding: 16px 36px;
+            border-radius: 980px;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .btn-history {
+            background-color: #0071e3;
+            color: #fff;
+        }
+
+        .btn-history:hover {
+            background-color: #0077ed;
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0,113,227,0.3);
+        }
+
+        .btn-classes {
+            background-color: #f5f5f7;
+            color: #0071e3;
+        }
+
+        .btn-classes:hover {
+            background-color: #e8e8ed;
+            transform: scale(1.05);
+        }
+
+        @keyframes appleFadeUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 50px; }
+            .sub { font-size: 20px; }
+            .links { flex-direction: column; width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <h1>조하음</h1>
+        <p class="sub">Robot Software Specialist</p>
+        <div class="links">
+            <a href="history.html" class="btn-apple btn-history">HISTORY</a>
+            <a href="classes.html" class="btn-apple btn-classes">CLASSES</a>
+        </div>
+    </div>
+</body>
+</html>
