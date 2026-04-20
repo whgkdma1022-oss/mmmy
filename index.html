@@ -31,7 +31,13 @@
             <div class="hero-overlay"></div>
             <div class="hero-content">
                 <div class="profile-container animate-up">
-                    <img src="assets/profile.jpg" alt="JO HA EUM" class="profile-img">
+                    <div class="zoom-container" onclick="openModal(this)">
+                        <img src="assets/profile.jpg" alt="JO HA EUM Technical Summary" class="profile-img zoomable">
+                        <div class="zoom-hint">
+                            <i class="fas fa-search-plus"></i>
+                            <span>Click to Expand</span>
+                        </div>
+                    </div>
                 </div>
                 <h2 class="animate-up mb-small"><span class="badge light">Proven Professionalism</span> Cyber-Engineer / Robot Specialty</h2>
                 <h1 class="animate-up delay-1 main-title">"24시간 무중단 가동을 책임지는 <br><span class="highlight-white">고신뢰성 설비 엔지니어 조하음입니다</span>"</h1>
@@ -294,5 +300,12 @@
 
 
     <script src="main.js"></script>
+
+    <!-- Image Expansion Modal (LightBox) -->
+    <div id="image-modal" class="modal">
+        <span class="modal-close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="modal-caption"></div>
+    </div>
 </body>
 </html>

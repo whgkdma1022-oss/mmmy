@@ -180,6 +180,44 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Modal Logic
+    const modal = document.getElementById('image-modal');
+    const modalImg = document.getElementById('modal-img');
+    const closeModal = document.querySelector('.modal-close');
+
+    window.openModal = (container) => {
+        const img = container.querySelector('img');
+        if (modal && modalImg) {
+            modal.style.display = "block";
+            modalImg.src = img.src;
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        }
+    };
+
+    if (closeModal) {
+        closeModal.onclick = function() {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        };
+    }
+
+    if (modal) {
+        modal.onclick = function(e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+                document.body.style.overflow = 'auto';
+            }
+        };
+    }
+
+    // Escape key to close modal
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal && modal.style.display === 'block') {
+            modal.style.display = "none";
+            document.body.style.overflow = 'auto';
+        }
+    });
+
     renderPosts();
 
     // Navigation & Scroll Logic
