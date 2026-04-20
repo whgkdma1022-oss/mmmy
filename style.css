@@ -412,6 +412,46 @@ header {
     line-height: 1.7;
 }
 
+.mt-vsmall { margin-top: 0.5rem; }
+.mb-large { margin-bottom: 3rem; }
+
+/* Technical Resource Card */
+.technical-resource {
+    background: #fdfdfd;
+    padding: 1.5rem 2.5rem;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    border: 1px solid rgba(7, 71, 173, 0.05);
+}
+
+.resource-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.resource-info i {
+    font-size: 2rem;
+    color: #ff0000; /* YouTube Red */
+}
+
+.resource-info h4 { font-size: 1.1rem; margin-bottom: 2px; }
+.resource-info p { font-size: 0.85rem; color: #777; }
+
+.btn-primary.mini {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+    .technical-resource { flex-direction: column; text-align: center; gap: 1.5rem; }
+}
+
 /* Sections */
 .section {
     padding: 100px 0;
